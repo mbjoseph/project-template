@@ -1,4 +1,4 @@
-Markdown template: academic journal article
+Academic journal article template
 ===========================================
 
 ## Description
