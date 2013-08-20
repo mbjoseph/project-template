@@ -21,6 +21,7 @@ can be made to export to other formats like LaTeX etc.
 
 To make the article:
 ```
+git clone git://github.com/mbjoseph/project-template.git
 cd project-template
 make
 ```
