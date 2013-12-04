@@ -1,10 +1,10 @@
 all: output/figures.pdf output/table.pdf output/article_text.pdf output/article_text.docx output/full_article.pdf
 
-output/figures.pdf: analysis/analysis.R
+output/figures.pdf: analysis/analysis.R analysis/iris.csv
 	R --slave --vanilla < analysis/analysis.R
 	pandoc -H format.sty -V fontsize=12pt analysis/figures.md -o output/figures.pdf
-	
-output/table.pdf: analysis/analysis.R
+
+output/table.pdf: analysis/analysis.R analysis/iris.csv
 	pandoc -H format.sty -V fontsize=12pt analysis/table.md -o output/table.pdf
 
 output/article_text.docx: article_text.md refs.bib
