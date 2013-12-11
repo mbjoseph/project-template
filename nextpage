@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# nextpage - a script to figure out what the next page is for concatenated pdfs
+# usage: nextpage pdftoread.pdf
+# returns: the number of pages in the read document, plus one
+
+pdfinfo $1 > info.txt # saves pdf info to info.txt
+grep "Pages" info.txt > pages.txt # extract line with page info
+NPAGES=$(grep -Po '([0-9]+)' pages.txt) # return number of pages in pdf
+rm info.txt
+rm pages.txt
+echo $(($NPAGES+1))

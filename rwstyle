@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# rwstyle - a script to rewrite the format.sty file to update page numbers
+# usage: rwstyle number_of_pages > format.sty
+
+cat <<- _EOF_
+\usepackage[vmargin=1in,hmargin=1in]{geometry}
+\usepackage{lineno}
+\linenumbers
+\usepackage{times}
+\usepackage{float}% http://ctan.org/pkg/float
+\setcounter{page}{$1}
+_EOF_

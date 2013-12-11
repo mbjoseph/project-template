@@ -11,7 +11,7 @@ anova(mod1, mod2) # interaction term is significantly different from 0
 # Show the interaction effect
 require(ggplot2)
 fig1 <- ggplot(iris, aes(Sepal.Length, Sepal.Width, color=Species)) + 
-  geom_point(shape=1) + theme_classic() + 
+  geom_point(size=2) + theme_classic() + 
   stat_smooth(method="lm", aes(fill=Species), se=F)
 ggsave("figure1.pdf", fig1, width=5, height=3)
 

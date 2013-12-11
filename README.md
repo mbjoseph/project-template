@@ -43,7 +43,5 @@ articles that are cited. Most reference management software
 (e.g. [Mendeley](http://www.mendeley.com/), [Zotero](http://www.mendeley.com/), 
 [EndNote](http://endnote.com/)) can export a .bib file.
 
-### Disclaimer
-This is my first crack at thinking about and setting up an efficient 
-workflow. Most likely, there are better implementations out there, and 
-this one is not quite perfect yet.
+### Dependencies
+[pandoc](http://johnmacfarlane.net/pandoc/installing.html), [xpdf](http://www.foolabs.com/xpdf/), [R](http://www.r-project.org/)
